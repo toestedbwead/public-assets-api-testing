@@ -18,8 +18,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $our_announcement_id = $conn->insert_id;
         $message = "Announcement saved to our database (ID: $our_announcement_id).";
         
-        // In the NEXT STEP, we will add the API call to Citizen system here
-        // $api_result = pushToCitizenSystem($title, $content, $category, $our_announcement_id);
+        // After: $our_announcement_id = $conn->insert_id;
+
+        // Try to send to Citizen system
+        require_once 'includes/api_sender.php';
+        $api_result = sendToCitizenSystem($our_announcement_id, $title, $content, $category);
+
+        if (isset($api_result['status']) && $api_result['status'] == 'success') {
+            $message .= " ✅ Sent to Citizen System (ID: " . $api_result['citizen_id'] . ")";
+            $push_status = 'sent';
+            $citizen_id = $api_result['citizen_id'];
+        } else {
+            $message .= " ❌ Failed to send to Citizen: " . ($api_result['error'] ?? 'Unknown error');
+            $push_status = 'failed';
+            $citizen_id = NULL;
+        }
+
+        // Update announcement record
+        $update_sql = "UPDATE announcements SET 
+                    push_status = '$push_status', 
+                    citizen_notification_id = " . ($citizen_id ? "'$citizen_id'" : "NULL") . " 
+                    WHERE id = $our_announcement_id";
+        $conn->query($update_sql);
         
     } else {
         $message = "Error: " . $conn->error;

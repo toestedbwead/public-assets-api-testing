@@ -5,6 +5,8 @@ define('DB_USER', 'publ_lead_programmer');
 define('DB_PASS', '0000');
 
 
+define('CITIZEN_API_URL', 'http://localhost/citizen_system/api.php'); // Your local XAMPP
+define('CITIZEN_API_KEY', 'capstone_key_2024'); // Must match Citizen system
 
 function getDBConnection() {
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
