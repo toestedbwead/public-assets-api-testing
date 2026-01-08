@@ -1,8 +1,8 @@
 <?php
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'public_assets_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_NAME', 'publ_pubasset');
+define('DB_USER', 'publ_lead_programmer');
+define('DB_PASS', '9$TT81Vp8NnX&vIU');
 
 // Citizen system API URL (for later - we'll use a mock URL first)
 define('CITIZEN_API_URL', 'https://mockapi.io/your-mock-endpoint'); // Example placeholder
