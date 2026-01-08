@@ -2,7 +2,7 @@
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'publ_pubasset');
 define('DB_USER', 'publ_lead_programmer');
-define('DB_PASS', '9$TT81Vp8NnX&vIU');
+define('DB_PASS', '0000');
 
 
 
