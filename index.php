@@ -56,7 +56,7 @@ unset($_SESSION['login_error']);
         </form>
 
         <p class="text-center text-gray-500 text-sm mt-6">
-            Don't have an account? <a href="https://goserveph.com/register.php" class="text-green-600 hover:underline">Register on the main portal</a>
+            Don't have an account? <a href="https://goserveph.com/register.php?return_to=<?php echo urlencode('https://public-asset.goserveph.com/index.php');?>" class="text-green-600 hover:underline">Register on the main portal</a>
         </p>
     </div>
 
