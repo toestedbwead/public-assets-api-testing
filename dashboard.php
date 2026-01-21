@@ -17,7 +17,7 @@ $email = $_SESSION['email'] ?? 'unknown';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citizen Demo Dashboard</title>
+    <title>Public Asset and Facility Management System Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -29,7 +29,7 @@ $email = $_SESSION['email'] ?? 'unknown';
     <!-- Navbar -->
     <nav class="bg-green-600 text-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold">Citizen Information & Engagement System</h1>
+            <h1 class="text-xl font-bold">Public Asset and Facility Management System</h1>
             <div class="flex items-center space-x-4">
                 <span class="text-sm">Welcome, <?php echo htmlspecialchars($full_name); ?> (<?php echo ucfirst($role); ?>)</span>
                 <a href="logout.php" class="bg-white text-green-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition">
@@ -47,21 +47,21 @@ $email = $_SESSION['email'] ?? 'unknown';
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Dummy Cards -->
                 <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
-                    <h3 class="text-lg font-semibold text-gray-800">Citizen Registry</h3>
+                    <h3 class="text-lg font-semibold text-gray-800">Cemetery & Burial Management</h3>
                     <p class="text-gray-600 mt-2">View or update your personal information.</p>
-                    <button class="mt-4 text-green-600 hover:underline">Go to Registry →</button>
+                    <button class="mt-4 text-green-600 hover:underline">Go to Cemetery →</button>
                 </div>
 
                 <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
-                    <h3 class="text-lg font-semibold text-gray-800">Feedback & Grievance</h3>
+                    <h3 class="text-lg font-semibold text-gray-800">Parks & Recreation</h3>
                     <p class="text-gray-600 mt-2">Submit concerns or suggestions.</p>
-                    <button class="mt-4 text-green-600 hover:underline">Submit Feedback →</button>
+                    <button class="mt-4 text-green-600 hover:underline">Go to Parks →</button>
                 </div>
 
                 <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md transition">
-                    <h3 class="text-lg font-semibold text-gray-800">Notifications</h3>
+                    <h3 class="text-lg font-semibold text-gray-800">Facility Management System</h3>
                     <p class="text-gray-600 mt-2">Check alerts and updates.</p>
-                    <button class="mt-4 text-green-600 hover:underline">View Alerts →</button>
+                    <button class="mt-4 text-green-600 hover:underline">Go to Facilities →</button>
                 </div>
             </div>
 
