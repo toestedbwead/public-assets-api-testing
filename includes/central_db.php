@@ -2,8 +2,8 @@
 
 $host     = 'localhost';
 $dbname   = 'gose_user_db';          
-$username = 'gose_lead-prog';                  
-$password = '6t7rt7Les4CLA3IZ';                
+$username = 'root';                  
+$password = '';                
 
 $central_conn = mysqli_connect($host, $username, $password, $dbname);
 
